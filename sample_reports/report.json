@@ -1,0 +1,45 @@
+{
+  "target": "https://abhijeet01khot.github.io/FSD-Assignment-4/",
+  "final_url": "https://abhijeet01khot.github.io/FSD-Assignment-4/",
+  "http_status": 200,
+  "https_used": true,
+  "findings_count": 5,
+  "findings": [
+    {
+      "id": "HEADER-CONTENT_SECURITY_POLICY",
+      "title": "Missing Content-Security-Policy header",
+      "severity": "Medium",
+      "evidence": "The response does not contain Content-Security-Policy.",
+      "recommendation": "Define a Content-Security-Policy suitable for the website. Test the policy before enforcing it."
+    },
+    {
+      "id": "HEADER-X_CONTENT_TYPE_OPTIONS",
+      "title": "Missing X-Content-Type-Options header",
+      "severity": "Low",
+      "evidence": "The response does not contain X-Content-Type-Options.",
+      "recommendation": "Set X-Content-Type-Options to nosniff."
+    },
+    {
+      "id": "HEADER-REFERRER_POLICY",
+      "title": "Missing Referrer-Policy header",
+      "severity": "Low",
+      "evidence": "The response does not contain Referrer-Policy.",
+      "recommendation": "Configure an appropriate Referrer-Policy, such as strict-origin-when-cross-origin."
+    },
+    {
+      "id": "HEADER-PERMISSIONS_POLICY",
+      "title": "Missing Permissions-Policy header",
+      "severity": "Informational",
+      "evidence": "The response does not contain Permissions-Policy.",
+      "recommendation": "Consider restricting browser features that the website does not need."
+    },
+    {
+      "id": "CORS-001",
+      "title": "Wildcard CORS origin detected",
+      "severity": "Informational",
+      "evidence": "Access-Control-Allow-Origin is set to '*'. Access-Control-Allow-Credentials: not present.",
+      "recommendation": "Confirm that wildcard CORS is intentional. It can be appropriate for public, non-sensitive resources."
+    }
+  ],
+  "scan_time_utc": "2026-10-19T19:35:11.942348+00:00"
+}
